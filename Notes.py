@@ -1,4 +1,11 @@
 import os, sys
+from tkinter import *
+from tkinter import messagebox
+from tkinter.filedialog import askopenfile, asksaveasfile
+
+
+
+
 
 def addNote():
     # some code
