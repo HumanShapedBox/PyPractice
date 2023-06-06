@@ -1,4 +1,4 @@
-from operations import *
+import operations as o
 
 def get_data():
     last_name = input('Введите фамилию: ').strip()
@@ -16,16 +16,16 @@ def get_operation_number():
 
 def perform_operation(operation_number):
     if operation_number == '1':
-        print_book()
+        o.print_book()
     elif operation_number == '2':
-        add(get_data())
+        o.add(get_data())
     elif operation_number == '3':
-        print('\n'.join(find(input('Введите фамилию, имя, отчество или номер телефона: ').strip())))
+        print('\n'.join(o.find(input('Введите фамилию, имя, отчество или номер телефона: ').strip())))
     elif operation_number == '4':
         data = input('Введите фамилию, имя, отчество или телефон, которые нужно изменить: ')
-        transformation(data)
+        o.transformation(data)
     elif operation_number == '5':
         user = input('Введите фамилию, имя, отчество или телефон, чтобы удалить контакт: ')
-        delete(user)
+        o.delete(user)
     else:
         print('Завершение работы')
