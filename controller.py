@@ -1,11 +1,11 @@
 import operations as o
+from datetime import date
 
 def get_data():
-    last_name = input('Введите фамилию: ').strip()
-    first_name = input('Введите имя: ').strip()
-    midle_name = input('Введите отчество: ').strip()
-    phone_number = input('Введите номер: ').strip()
-    return(last_name, first_name, midle_name, phone_number)
+    title = input('Введите название заметки: ').strip()
+    body = input('Напишите что-нибудь: ').strip()
+    current_date = date
+    return(title, body, current_date)
 
 def get_operation_number():
     operation = input().strip()
@@ -16,7 +16,7 @@ def get_operation_number():
 
 def perform_operation(operation_number):
     if operation_number == '1':
-        o.print_book()
+        o.print_notes()
     elif operation_number == '2':
         o.add(get_data())
     elif operation_number == '3':

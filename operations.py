@@ -1,33 +1,33 @@
 import controller as c
 
-def print_book():
-    book = open('phonebook.txt', 'r')
-    print(book.read())
-    book.close()
+def print_notes():
+    notes = open('Notes.csv', 'r')
+    print(notes.read())
+    notes.close()
 
 def find(name):
-    book = open('phonebook.txt', 'r')
+    notes = open('Notes.csv', 'r')
     find_list = list()
-    for line in book:
+    for line in notes:
         if name in line.split():
             find_list.append(line)
-    book.close()
+    notes.close()
     return find_list
 
 def add(data):
-    book = open('phonebook.txt', 'a')
-    book.write(' '.join(data) + '\n')
-    book.close()
+    notes = open('Notes.csv', 'a')
+    notes.write(' '.join(data) + '\n')
+    notes.close()
 
 def transformation(data):
-    book = open('phonebook.txt', 'a')
+    notes = open('Notes.csv', 'a')
     new_data = input('Введите актуальные данные: ')
-    if c.data in book:
-        return book.replace(data, new_data)
-    book.close()
+    if c.data in notes:
+        return notes.replace(data, new_data)
+    notes.close()
 
 def delete(name):
-    book = open('phonebook.txt', 'r')
-    data = book.readlines()
+    notes = open('Notes.csv', 'a')
+    data = notes.readlines()
     data = filter(lambda line: name not in line, data)
-    book.close()
+    notes.close()
