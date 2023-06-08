@@ -26,8 +26,8 @@ def transformation(data):
         return notes.replace(data, new_data)
     notes.close()
 
-def delete(name):
+def delete(title):
     notes = open('Notes.csv', 'a')
     data = notes.readlines()
-    data = filter(lambda line: name not in line, data)
+    data = filter(lambda line: title not in line, data)
     notes.close()
