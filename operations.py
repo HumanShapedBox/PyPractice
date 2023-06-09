@@ -5,11 +5,11 @@ def print_notes():
     print(notes.read())
     notes.close()
 
-def find(name):
+def find(title):
     notes = open('Notes.csv', 'r')
     find_list = list()
-    for line in notes:
-        if name in line.split():
+    for line in title:
+        if title in line.split():
             find_list.append(line)
     notes.close()
     return find_list

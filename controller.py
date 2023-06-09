@@ -1,11 +1,11 @@
 import operations as o
-from datetime import date
+import datetime
 
 def get_data():
     title = input('Введите название заметки: ').strip()
     body = input('Напишите что-нибудь: ').strip()
-    #current_date = date
-    return(title, body)#, current_date)
+    current_date = str(datetime.datetime.now())
+    return(title, body, current_date)
 
 def get_operation_number():
     operation = input().strip()
