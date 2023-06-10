@@ -22,7 +22,7 @@ def add(data):
 def transformation(data):
     notes = open('Notes.csv', 'a')
     new_data = input('Введите актуальные данные: ')
-    if data in notes:
+    if data in str(notes):
         return notes.replace(data, new_data)
     notes.close()
 
